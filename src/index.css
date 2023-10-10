@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.top-header {
+  background: url("./assets/images/pattern-bg-mobile.png") no-repeat top center;
+  height: 18rem;
+}
+
+@media (min-width: 390px) {
+  .top-header {
+    background-image: url("./assets/images/pattern-bg-desktop.png");
+    margin: unset;
+    max-width: 100%;
+    height: 13.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .track-details {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .track-details {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .ip-details {
+    border-right: 1px solid hsl(0, 0%, 59%);
+  }
+
+  .ip-details:last-child {
+    border: none;
+  }
+}
